@@ -54,7 +54,7 @@ This endpoint requires [client-authorization-token](../../doc/auth/oauth-2-clien
 |  --- | --- | --- | --- |
 | `countryCode` | `string` | Header, Required | This represents the ISO 3166-1 standard Alpha-2 code of the Country, which is the first two characters of the country code. |
 | `consumerUuid` | `string` | Header, Required | This is the consumer's or customer's unique SSO UUID. |
-| `userAuthorizationToken` | `string` | Header, Required | This is the consumer's SSO access, which you retrieved from */auth/exchangeAccessCode* endpoint prefixed by Bearer. |
+| `userAuthorizationToken` | `string` | Header, Required | This is the consumer's SSO access, which you retrieved from /auth/exchangeAccessCode endpoint prefixed by Bearer. |
 | `application` | `string` | Header, Required | This is the calling application. |
 | `languageCode` | `string` | Query, Required | This is a concatenation of language in lower case as per ISO 639-1 , “-” and country code as per ISO 3166-1 alpha-2. For example: en-GB. |
 | `language` | `?string` | Header, Optional | This is the language in ISO 639-1 2 letter code format.<br><br>**Default**: `'en'` |

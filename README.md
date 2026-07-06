@@ -10,29 +10,29 @@ Loyalty Account Management provides the end points needed in order to generate t
 Run the following command to install the package and automatically add the dependency to your composer.json file:
 
 ```bash
-composer require "shell/loyalty-sdk:0.0.1"
+composer require "shell/loyalty-sdk:0.0.2"
 ```
 
 Or add it to the composer.json file manually as given below:
 
 ```json
 "require": {
-    "shell/loyalty-sdk": "0.0.1"
+    "shell/loyalty-sdk": "0.0.2"
 }
 ```
 
 You can also view the package at:
-https://packagist.org/packages/shell/loyalty-sdk#0.0.1
+https://packagist.org/packages/shell/loyalty-sdk#0.0.2
 
 ## Initialize the API Client
 
-**_Note:_** Documentation for the client can be found [here.](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/client.md)
+**_Note:_** Documentation for the client can be found [here.](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/client.md)
 
 The following parameters are configurable for the API Client:
 
 | Parameter | Type | Description |
 |  --- | --- | --- |
-| environment | [`Environment`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/README.md#environments) | The API environment. <br> **Default: `Environment.SIT`** |
+| environment | [`Environment`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/README.md#environments) | The API environment. <br> **Default: `Environment.SIT`** |
 | timeout | `int` | Timeout for API calls in seconds.<br>*Default*: `30` |
 | enableRetries | `bool` | Whether to enable retries and backoff feature.<br>*Default*: `false` |
 | numberOfRetries | `int` | The number of retries to make.<br>*Default*: `0` |
@@ -42,13 +42,13 @@ The following parameters are configurable for the API Client:
 | retryOnTimeout | `bool` | Whether to retry on request timeout.<br>*Default*: `true` |
 | httpStatusCodesToRetry | `array` | Http status codes to retry against.<br>*Default*: `408, 413, 429, 500, 502, 503, 504, 521, 522, 524` |
 | httpMethodsToRetry | `array` | Http methods to retry against.<br>*Default*: `'GET', 'PUT'` |
-| loggingConfiguration | [`LoggingConfigurationBuilder`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/logging-configuration-builder.md) | Represents the logging configurations for API calls |
-| proxyConfiguration | [`ProxyConfigurationBuilder`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/proxy-configuration-builder.md) | Represents the proxy configurations for API calls |
-| publicBearerTokenCredentials | [`PublicBearerTokenCredentials`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/auth/oauth-2-bearer-token.md) | The Credentials Setter for OAuth 2 Bearer token |
-| publicBasicTokenCredentials | [`PublicBasicTokenCredentials`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/auth/custom-header-signature.md) | The Credentials Setter for Custom Header Signature |
-| privateBasicTokenCredentials | [`PrivateBasicTokenCredentials`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/auth/custom-header-signature-1.md) | The Credentials Setter for Custom Header Signature |
-| clientAuthorizationTokenCredentials | [`ClientAuthorizationTokenCredentials`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/auth/oauth-2-client-credentials-grant.md) | The Credentials Setter for OAuth 2 Client Credentials Grant |
-| customerHeaderCredentials | [`CustomerHeaderCredentials`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/auth/custom-header-signature-2.md) | The Credentials Setter for Custom Header Signature |
+| loggingConfiguration | [`LoggingConfigurationBuilder`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/logging-configuration-builder.md) | Represents the logging configurations for API calls |
+| proxyConfiguration | [`ProxyConfigurationBuilder`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/proxy-configuration-builder.md) | Represents the proxy configurations for API calls |
+| publicBearerTokenCredentials | [`PublicBearerTokenCredentials`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/auth/oauth-2-bearer-token.md) | The Credentials Setter for OAuth 2 Bearer token |
+| publicBasicTokenCredentials | [`PublicBasicTokenCredentials`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/auth/custom-header-signature.md) | The Credentials Setter for Custom Header Signature |
+| privateBasicTokenCredentials | [`PrivateBasicTokenCredentials`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/auth/custom-header-signature-1.md) | The Credentials Setter for Custom Header Signature |
+| clientAuthorizationTokenCredentials | [`ClientAuthorizationTokenCredentials`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/auth/oauth-2-client-credentials-grant.md) | The Credentials Setter for OAuth 2 Client Credentials Grant |
+| customerHeaderCredentials | [`CustomerHeaderCredentials`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/auth/custom-header-signature-2.md) | The Credentials Setter for Custom Header Signature |
 
 The API client can be initialized as follows:
 
@@ -118,35 +118,35 @@ The SDK can be configured to use a different environment for making API calls. A
 
 This API uses the following authentication schemes.
 
-* [`PublicBearerToken (OAuth 2 Bearer token)`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/auth/oauth-2-bearer-token.md)
-* [`PublicBasicToken (Custom Header Signature)`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/auth/custom-header-signature.md)
-* [`PrivateBasicToken (Custom Header Signature)`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/auth/custom-header-signature-1.md)
-* [`client-authorization-token (OAuth 2 Client Credentials Grant)`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/auth/oauth-2-client-credentials-grant.md)
-* [`customerHeader (Custom Header Signature)`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/auth/custom-header-signature-2.md)
+* [`PublicBearerToken (OAuth 2 Bearer token)`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/auth/oauth-2-bearer-token.md)
+* [`PublicBasicToken (Custom Header Signature)`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/auth/custom-header-signature.md)
+* [`PrivateBasicToken (Custom Header Signature)`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/auth/custom-header-signature-1.md)
+* [`client-authorization-token (OAuth 2 Client Credentials Grant)`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/auth/oauth-2-client-credentials-grant.md)
+* [`customerHeader (Custom Header Signature)`](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/auth/custom-header-signature-2.md)
 
 ## List of APIs
 
-* [Profile Management](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/controllers/profile-management.md)
-* [Authorization](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/controllers/authorization.md)
-* [Offer](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/controllers/offer.md)
-* [Balances](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/controllers/balances.md)
-* [Redemption](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/controllers/redemption.md)
-* [Transaction](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/controllers/transaction.md)
+* [Profile Management](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/controllers/profile-management.md)
+* [Authorization](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/controllers/authorization.md)
+* [Offer](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/controllers/offer.md)
+* [Balances](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/controllers/balances.md)
+* [Redemption](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/controllers/redemption.md)
+* [Transaction](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/controllers/transaction.md)
 
 ## SDK Infrastructure
 
 ### Configuration
 
-* [ProxyConfigurationBuilder](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/proxy-configuration-builder.md)
-* [LoggingConfigurationBuilder](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/logging-configuration-builder.md)
-* [RequestLoggingConfigurationBuilder](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/request-logging-configuration-builder.md)
-* [ResponseLoggingConfigurationBuilder](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/response-logging-configuration-builder.md)
+* [ProxyConfigurationBuilder](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/proxy-configuration-builder.md)
+* [LoggingConfigurationBuilder](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/logging-configuration-builder.md)
+* [RequestLoggingConfigurationBuilder](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/request-logging-configuration-builder.md)
+* [ResponseLoggingConfigurationBuilder](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/response-logging-configuration-builder.md)
 
 ### HTTP
 
-* [HttpRequest](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/http-request.md)
+* [HttpRequest](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/http-request.md)
 
 ### Utilities
 
-* [ApiResponse](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.1/doc/api-response.md)
+* [ApiResponse](https://www.github.com/sdks-io/loyalty-php-sdk/tree/0.0.2/doc/api-response.md)
 

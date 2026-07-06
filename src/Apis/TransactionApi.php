@@ -43,7 +43,7 @@ class TransactionApi extends BaseApi
      *        Country, which is the first two characters of the country code.
      * @param string $consumerUuid This is the consumer's or customer's unique SSO UUID.
      * @param string $userAuthorizationToken This is the consumer's SSO access, which you retrieved
-     *        from * /auth/exchangeAccessCode* endpoint prefixed by Bearer.
+     *        from /auth/exchangeAccessCode endpoint prefixed by Bearer.
      * @param string $application This is the calling application.
      * @param string $languageCode This is a concatenation of language in lower case as per ISO
      *        639-1 , “-” and country code as per ISO 3166-1 alpha-2. For example: en-GB.
