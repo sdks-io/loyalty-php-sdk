@@ -11,7 +11,7 @@ $profileManagementApi = $client->getProfileManagementApi();
 
 # Access Code
 
-This endpoint allows get the Access Code from */api/v2/auth/accessCode* endpoint. Use the *accessToken* obtained using */api/v2/auth/exchangeAccessCode* as Bearer in the Authorization header.
+This endpoint allows get the Access Code from /api/v2/auth/accessCode endpoint. Use the *accessToken* obtained using /api/v2/auth/exchangeAccessCode as Bearer in the Authorization header.
 
 :information_source: **Note** This endpoint does not require authentication.
 
@@ -24,7 +24,7 @@ function accessCode(string $xSsoMarket, array $authorization): ApiResponse
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `xSsoMarket` | `string` | Header, Required | A combination of [language code](https://www.iso.org/standard/22109.html) (lower case) and [country code](https://www.iso.org/iso-3166-country-codes.html) (upper case), separated by a hyphen. For example: **en-TH**. |
-| `authorization` | `array` | Header, Required | The input value is **Bearer {{accessToken}}**. The value of *accessToken* is retrieved from the */auth/exchangeAccessCode* endpoint. |
+| `authorization` | `array` | Header, Required | The input value is **Bearer {{accessToken}}**. The value of *accessToken* is retrieved from the /auth/exchangeAccessCode endpoint. |
 
 ## Response Type
 

@@ -20,16 +20,15 @@ use LoyaltyApIsLib\Models\AccessCodeResponse;
 class ProfileManagementApi extends BaseApi
 {
     /**
-     * This endpoint allows get the Access Code from * /api/v2/auth/accessCode* endpoint. Use the
-     * *accessToken* obtained using * /api/v2/auth/exchangeAccessCode* as Bearer in the Authorization
-     * header.
+     * This endpoint allows get the Access Code from /api/v2/auth/accessCode endpoint. Use the
+     * *accessToken* obtained using /api/v2/auth/exchangeAccessCode as Bearer in the Authorization header.
      *
      * @param string $xSsoMarket A combination of [language
      *        code](https://www.iso.org/standard/22109.html) (lower case) and [country code](https:
      *        //www.iso.org/iso-3166-country-codes.html) (upper case), separated by a hyphen. For
      *        example: **en-TH**.
      * @param array $authorization The input value is **Bearer {{accessToken}}**. The value of
-     *        *accessToken* is retrieved from the * /auth/exchangeAccessCode* endpoint.
+     *        *accessToken* is retrieved from the /auth/exchangeAccessCode endpoint.
      *
      * @return ApiResponse Response from the API call
      */

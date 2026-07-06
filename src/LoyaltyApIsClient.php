@@ -102,7 +102,7 @@ class LoyaltyApIsClient implements ConfigurationInterface
             ->converter(new CompatibilityConverter())
             ->jsonHelper(ApiHelper::getJsonHelper())
             ->apiCallback($this->config['httpCallback'] ?? null)
-            ->userAgent('PHP-SDK/0.0.2 (OS: {os-info}, Engine: {engine}/{engine-version})')
+            ->userAgent('PHP-SDK/0.0.3 (OS: {os-info}, Engine: {engine}/{engine-version})')
             ->serverUrls(self::ENVIRONMENT_MAP[$this->getEnvironment()], Server::SHELL)
             ->authManagers([
                 'PublicBearerToken' => $this->publicBearerTokenManager,
