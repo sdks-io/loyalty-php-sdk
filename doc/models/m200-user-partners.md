@@ -30,8 +30,6 @@ $m200UserPartners = M200UserPartnersBuilder::init(
     ApiHelper::deserialize('{"code":"en‑GB","country":"GB"}'),
     'ACCESS_TOKEN',
     'REFRESH_TOKEN'
-)
-    ->additionalProperty('exampleAdditionalProperty', ApiHelper::deserialize('{"key1":"val1","key2":"val2"}'))
-    ->build();
+)->build();
 ```
 
